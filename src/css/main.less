@@ -158,6 +158,10 @@ video {
     justify-content: flex-end;
 }
 
+.left-side {
+    z-index: 1;
+}
+
 .shape {
     background-image: url("../img/Clip Group.png");
     background-size: 900px;
@@ -571,7 +575,7 @@ video {
     top: 0px;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 67%;
+    min-height: 72vh;
     z-index: 0;
 }
 
@@ -674,14 +678,10 @@ video {
     z-index: 1;
 }
 
-.programming-page-wrapper {
-    background-color: #30475E;
-    ;
-}
-
-.programming-page-header {
+.programming-page-header,
+.hardware-page-header,
+.human-page-header {
     color: #61D6E7;
-    ;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -697,7 +697,8 @@ video {
     margin-top: 165px;
     margin-bottom: 40px;
 }
-.programming-btn-link{
+
+.programming-btn-link {
     text-decoration: none;
     border: 1px solid #DD9964;
     color: #fff;
@@ -710,16 +711,189 @@ video {
     border-radius: 10px;
     z-index: 1;
 }
-.programming-btn{
+
+.left-programming-side,
+.left-hardware-side {
+    z-index: 1;
+}
+
+.right-side-programming,
+.right-side-hardware,
+.right-side-management {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.programming-btn {
     display: flex;
     justify-content: flex-end;
     z-index: 1;
+    padding: 70px 0 27px 0;
 }
-.programming-page-wrapper{
-    padding-top:70px;
+
+.programming-page,
+.hardware-page {
+    background-color: #30475E;
+    padding-top: 70px;
+    height: 73vh;
 }
-@media (min-width: 0px) and (max-width: 767px) {}
 
-@media (min-width: 768px) and (max-width: 991px) {}
+.programming-page-wrapper,
+.hardware-page-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
-@media (min-width: 992px) {}
+.programming-list {
+    list-style-type: none;
+    white-space: pre-wrap;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding-bottom: 60px;
+    z-index: 1;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.programming-content {
+    align-self: center;
+    margin-top: 92px;
+}
+
+.sub-programming-content {
+    padding-bottom: 22px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.sub-programming-list {
+    list-style-type: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.sub-block-programming {
+    align-self: center;
+}
+
+.sublist {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 70px;
+}
+
+.hardware-page-icon {
+    background-image: url('../img/hardware-icon-page.svg');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 90px;
+    margin-top: 165px;
+    margin-bottom: 40px;
+}
+
+.hardware-page-header {
+    color: #5781AB;
+}
+
+.hardware-list,
+.management-list,
+.human-list {
+    white-space: pre-wrap;
+    color: #fff;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding-bottom: 60px;
+    z-index: 1;
+}
+
+.right-side-hardware {
+    align-self: flex-end;
+    margin: 0 auto;
+}
+
+.management-page-header {
+    color: #FFBA85;
+}
+
+.management-page-icon,
+.human-page-icon {
+    background-image: url('../img/management-icon.svg');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 90px;
+    margin-top: 165px;
+    margin-bottom: 40px;
+}
+
+.management-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.management-list {
+    padding-bottom: 20px;
+}
+
+.management-btn {
+    padding: 17px 0 27px;
+}
+
+.human-page-icon {
+    background-image: url('../img/human-icon.svg');
+}
+
+.human-page-header {
+    color: #2497A6;
+    white-space: pre-wrap;
+}
+
+.human-page-wrapper {
+    display: flex;
+}
+
+.right-side-human {
+    align-self: flex-end;
+    z-index: 1;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .shape {
+        background-size: cover;
+        width: 147vw;
+        background-position: 0 90px;
+    }
+    .about-us-header {
+        margin-top: 0;
+        width: 100%;
+        font-size: 23px;
+    }
+    .about-header-text:first-child {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .about-us-picture{
+        width: 56%;
+    }
+}
+    @media (min-width: 768px) and (max-width: 991px) {}
+    @media (min-width: 992px) {}
