@@ -90,13 +90,13 @@ video {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .page {
-    max-width: 1440px;
     width: 100%;
     background-color: #30475E;
 }
 
 .container {
-    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 70px 0 70px;
 }
 
@@ -884,16 +884,41 @@ video {
     }
     .about-us-header {
         margin-top: 0;
-        width: 100%;
+        width: 70%;
         font-size: 23px;
     }
     .about-header-text:first-child {
         padding-top: 0;
         margin-top: 0;
     }
-    .about-us-picture{
+    .about-us-picture {
         width: 56%;
     }
+    .about-us-bg-picture{
+        background-image: url('../img/about-us-small-bg.svg');
+        margin-top: 0;
+        width: 40%;
+        align-self: center;
+        display: flex;
+        background-size: cover;
+    }
+    .about-us-block-header-text{
+        width: 87%;
+    }
 }
-    @media (min-width: 768px) and (max-width: 991px) {}
-    @media (min-width: 992px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) {
+    .about-header-text {
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .about-us-header{
+        font-size: 40px;
+    }
+    .shape{
+        background-size: cover;
+        height: 100%;
+    }
+}
